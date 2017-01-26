@@ -5,8 +5,5 @@ var lang = observable({
 
 });
 
-autorun(()=>{
-  lang.currentLang = 'eng';
-});
 
 export default lang;
