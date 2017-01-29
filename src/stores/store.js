@@ -1,7 +1,8 @@
-import {observable, action, autorun} from "mobx";
+import {observable} from "mobx";
 
 var lang = observable({
-  currentLang: ''
+  currentLang: '',
+  defaultLang: 'eng'
 
 });
 

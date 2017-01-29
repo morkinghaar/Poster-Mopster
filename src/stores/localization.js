@@ -17,6 +17,9 @@ let strings = new Localization({
     services: {
       title: "Our services"
     },
+    service: {
+      title: "Our service"
+    },
     contacts: {
       title: "Contacts"
     },
@@ -40,6 +43,9 @@ let strings = new Localization({
     services: {
       title: "Услуги"
   },
+  service: {
+    title: "Сервис"
+  },
     contacts: {
       title: "Контакты"
   },
@@ -62,6 +68,9 @@ let strings = new Localization({
   },
     services: {
       title: "Послуги"
+  },
+  service: {
+    title: "Послуга"
   },
     contacts: {
       title: "Контакти"
