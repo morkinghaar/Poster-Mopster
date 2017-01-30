@@ -10,12 +10,17 @@ import Localization from '../../stores/localization.js';
 
 @observer class App extends React.Component {
   componentWillMount() {
-    if(this.props.location.query.locale == null){
-      store.currentLang = cookie.load('setLang') || store.defaultLang;
+    if(this.props.location.query.locale != null){
+      var avilableLangs = Localization.getAvailableLanguages();
+        if(avilableLangs.indexOf(this.props.location.query.locale) >= 0 &&
+           avilableLangs.indexOf(this.props.location.query.locale) !== '') {
+
+          store.currentLang = this.props.location.query.locale;
+          cookie.save('setLang', store.currentLang, { path: '/' });
+          //console.log();
+        }
     } else {
-      store.currentLang = this.props.location.query.locale;
-      cookie.save('setLang', store.currentLang, { path: '/' });
-      console.log(store.currentLang);
+      store.currentLang = cookie.load('setLang') || store.defaultLang;
     }
   }
 
