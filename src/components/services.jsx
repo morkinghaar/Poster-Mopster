@@ -11,7 +11,10 @@ const home = (props) => {
   const {main} = props;
   return <div className="services"><h2>{Localization.services.title}</h2>
     <ul>
-      <li><NavLink to={{pathname: "/services/me", query: {locale: store.currentLang}}} activeStyle={{color: 'red'}}>{Localization.service.title}</NavLink></li>
+      <li><NavLink to={{pathname: "/services/web", query: {locale: store.currentLang}}} activeStyle={{color: 'red'}}>{Localization.service.title}</NavLink></li>
+      <li><NavLink to={{pathname: "/services/app", query: {locale: store.currentLang}}} activeStyle={{color: 'red'}}>{Localization.service.title}</NavLink></li>
+      <li><NavLink to={{pathname: "/services/servers", query: {locale: store.currentLang}}} activeStyle={{color: 'red'}}>{Localization.service.title}</NavLink></li>
+      <li><NavLink to={{pathname: "/services/etc", query: {locale: store.currentLang}}} activeStyle={{color: 'red'}}>{Localization.service.title}</NavLink></li>
     </ul>
     {main}
 
