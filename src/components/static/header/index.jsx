@@ -1,5 +1,5 @@
 import React from 'react';
-import Localization from '../../stores/localization.js';
+import Localization from '../../../stores/localization.js';
 
 
 const header = () => {

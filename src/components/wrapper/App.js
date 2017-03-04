@@ -1,7 +1,7 @@
 import React from 'react';
-import Header from '../static/header.jsx';
-import Navbar from '../static/navbar.jsx';
-import Footer from '../static/footer.jsx';
+import Header from '../static/header';
+import Navbar from '../static/navbar';
+import Footer from '../static/footer';
 import store from '../../stores/store.js';
 import {observer} from 'mobx-react';
 import cookie from 'react-cookie';
@@ -40,9 +40,11 @@ import Localization from '../../stores/localization.js';
     return (
       <div>
         <Header />
-        <Navbar location={location}/>
+        <Navbar location={location} localization={Localization}/>
         <hr />
-        {main}
+        {React.cloneElement(main, {
+          localization: Localization
+        })}
         <Footer />
       </div>
     );

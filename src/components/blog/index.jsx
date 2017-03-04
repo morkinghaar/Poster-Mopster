@@ -1,11 +1,8 @@
 import React from 'react'
-import Localization from 'react-localization'
-import store from '../stores/store.js'
+import Localization from 'react-localization';
+import store from '../../stores/store'
 
 const Blog = (props) => {
-
-
-  
 
     let blogTexts = new Localization(props.blog);
     blogTexts.setLanguage(store.currentLang);
