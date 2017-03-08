@@ -35,7 +35,6 @@ import Localization from '../../stores/localization.js';
     const {router} = this.props;
     const {location} = this.props;
     Localization.setLanguage(store.currentLang);
-
     const {main} = this.props;
     return (
       <div>

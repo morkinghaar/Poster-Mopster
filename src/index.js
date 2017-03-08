@@ -1,10 +1,18 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import Router from './router';
-import App from './components/wrapper/App';
+import {Router, browserHistory, match} from 'react-router';
+import routes from './routes';
 
 
 
-ReactDOM.render(Router,
+
+
+// match({history: browserHistory, routes: routes }, (error, redirectLocation, renderProps) => {
+//   console.log("ss")
+//   ReactDOM.render(<Router {...renderProps} />, document.getElementById("main"));
+// });
+
+
+ReactDOM.render(<Router history={browserHistory}>{routes}</Router>,
   document.getElementById("main")
 );
